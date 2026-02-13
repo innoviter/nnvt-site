@@ -1,0 +1,68 @@
+---
+---
+<div id="consent-banner" style="display: none;">
+  <div>
+    <strong>Datenschutzeinstellungen</strong>
+  </div>
+  <div>
+    Wir verwenden Cookies und andere Technologien, damit unsere Website zuverlässig und sicher läuft.
+  </div>
+  <div>
+    <input type="checkbox" checked disabled>
+    Notwendige<br/>
+    <input type="checkbox" id="consent-analytics" checked>
+    Anonymisierte Webanalyse
+  </div>
+  <div>
+    <button id="consent-save-btn">Speichern</button>
+  </div>
+</div>
+
+<script is:inline>
+  function getConsent() {
+    return JSON.parse(localStorage.getItem('consentSettings') || '{}');
+  }
+
+  function saveConsent() {
+    var settings = {
+      analytics: document.getElementById('consent-analytics').checked,
+    };
+    localStorage.setItem('consentSettings', JSON.stringify(settings));
+    document.getElementById('consent-banner').style.display = 'none';
+    applyConsent(settings);
+  }
+
+  function resetConsent() {
+    localStorage.removeItem('consentSettings');
+    location.reload();
+  }
+
+  function applyConsent(settings) {
+    if (settings.analytics) {
+      // Matomo loading prepared but not yet active
+      // loadMatomo();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var consent = getConsent();
+    if (Object.keys(consent).length === 0) {
+      document.getElementById('consent-banner').style.display = 'block';
+    } else {
+      applyConsent(consent);
+    }
+
+    var saveBtn = document.getElementById('consent-save-btn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', saveConsent);
+    }
+
+    var resetLink = document.getElementById('reset-consent-link');
+    if (resetLink) {
+      resetLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        resetConsent();
+      });
+    }
+  });
+</script>

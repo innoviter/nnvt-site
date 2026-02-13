@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Poppins;
+    src: url("/fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* === CSS Custom Properties for Dark/Light Mode === */
+:root {
+    --color-bg-body: #000000;
+    --color-bg-header: #ffffff;
+    --color-bg-main: #eeeeee;
+    --color-bg-footer: #000000;
+    --color-text: #000000;
+    --color-text-header: #000000;
+    --color-text-footer: #ffffff;
+    --color-lime: #a3e635;
+    --color-border-button: #000000;
+    --color-border-button-footer: #ffffff;
+}
+
+:root.dark {
+    --color-bg-header: #1a1a1a;
+    --color-bg-main: #111111;
+    --color-text: #eeeeee;
+    --color-text-header: #eeeeee;
+    --color-border-button: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+        --color-bg-header: #1a1a1a;
+        --color-bg-main: #111111;
+        --color-text: #eeeeee;
+        --color-text-header: #eeeeee;
+        --color-border-button: #ffffff;
+    }
+}
+
+/* === Base Styles === */
+body {
+    background-color: var(--color-bg-body);
+    color: var(--color-text);
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+header {
+    background-color: var(--color-bg-header);
+    color: var(--color-text-header);
+    padding: 2rem 2rem;
+}
+header > div {
+    margin: 0 auto;
+}
+header > div > nav {
+    margin-top: 1rem;
+}
+header .logo, header .heading {
+    font-family: Poppins, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(transparent, transparent 35%, var(--color-lime) 0, var(--color-lime) 90%, transparent 0) no-repeat;
+}
+
+main {
+    background-color: var(--color-bg-main);
+    padding: 1rem 2rem 1.5rem;
+}
+main h1, main h2, main h3, main h4, main > div, main > p, main > ul, main > ol {
+    margin: 1rem auto;
+}
+main ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1rem;
+}
+main ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 2rem;
+}
+main > ul > li, main > ol > li, main > p {
+    padding: 0.5rem 0 0.5rem;
+    line-height: 2rem;
+}
+main pre {
+    padding: 1rem;
+}
+
+footer {
+    background-color: var(--color-bg-footer);
+    color: var(--color-text-footer);
+    padding: 1rem 2rem 2rem;
+}
+footer > div {
+    margin: 0 auto;
+}
+
+/* === Headings === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Poppins, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 125%;
+}
+
+main figure figcaption {
+    padding-top: 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
+}
+main h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
+}
+main h1 .heading, main h2 .heading {
+    background: linear-gradient(transparent, transparent 35%, var(--color-lime) 0, var(--color-lime) 90%, transparent 0) no-repeat;
+}
+main div.button + h2 {
+    margin-top: 6rem;
+}
+main h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+main div.button + h3 {
+    margin-top: 4.5rem;
+}
+main h4, footer h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 150%;
+}
+
+/* === Links === */
+a, main a {
+    text-decoration: underline;
+}
+a:hover, main a:hover {
+    text-decoration: none;
+}
+
+/* === Buttons === */
+.button {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.button > a {
+    border: 2px solid;
+    padding: 1.5rem 3rem;
+    text-decoration-line: none;
+}
+main .button > a { border-color: var(--color-border-button); }
+main .button > a:hover { background-color: var(--color-border-button); color: var(--color-bg-main); }
+footer .button > a { border-color: var(--color-border-button-footer); }
+footer .button > a:hover { background-color: var(--color-border-button-footer); color: #000000; }
+
+/* === Consent Banner === */
+#consent-banner {
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(163, 230, 53, 0.95);
+    color: #000000;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #000000;
+    padding: 1.5rem 2rem;
+    font-size: 0.75rem;
+    width: 100%;
+}
+#consent-banner > div {
+    padding: 0.5rem;
+}
+#consent-banner > div > button {
+    color: #ffffff;
+    border: 1px solid #000000;
+    background-color: #000000;
+    padding: 0.5rem 0.75rem;
+}
+#consent-banner > div > button:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* === Responsive max-width === */
+/* sm */
+@media (min-width: 640px) {
+    header > div, footer > div, main h1, main h2, main h3, main h4, main > div, main > p, main > ul, main > ol {
+        max-width: 580px;
+    }
+    #consent-banner { max-width: 480px; }
+}
+/* md */
+@media (min-width: 768px) {
+    header > div, footer > div, main h1, main h2, main h3, main h4, main > div, main > p, main > ul, main > ol {
+        max-width: 700px;
+        min-width: 700px;
+    }
+    #consent-banner { max-width: 480px; min-width: 480px; }
+}
+/* lg */
+@media (min-width: 1024px) {
+    header > div, footer > div, main h1, main h2, main h3, main h4, main > div, main > p, main > ul, main > ol {
+        max-width: 960px;
+        min-width: 960px;
+    }
+}
+/* xl */
+@media (min-width: 1280px) {
+    header > div, footer > div, main h1, main h2, main h3, main h4, main > div, main > p, main > ul, main > ol {
+        max-width: 960px;
+        min-width: 960px;
+    }
+}

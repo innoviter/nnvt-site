@@ -1,0 +1,21 @@
+---
+interface Props {
+  baseName: string;
+  alt: string;
+  caption?: string;
+}
+const { baseName, alt, caption = 'Dieses Bild wurde generiert mit DALL-E.' } = Astro.props;
+---
+<div>
+  <figure>
+    <img
+      src={`/images/${baseName}.960w.webp`}
+      width="960"
+      height="480"
+      alt={alt}
+      srcset={`/images/${baseName}.580w.webp 580w, /images/${baseName}.700w.webp 700w, /images/${baseName}.960w.webp 960w`}
+      sizes="(max-width: 640px) 580px, (max-width: 768px) 700px, (max-width: 1024px) 960px, 960px"
+    />
+    <figcaption>{caption}</figcaption>
+  </figure>
+</div>

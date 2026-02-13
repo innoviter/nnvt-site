@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: 'email' | 'phone';
+}
+const { name } = Astro.props;
+---
+{name === 'email' && (
+  <svg width="16px" height="16px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 5.3585V14H16V5.35849L8 10.3585L0 5.3585Z"/>
+    <path d="M16 3V2H0V3L8 8L16 3Z"/>
+  </svg>
+)}
+{name === 'phone' && (
+  <svg width="16px" height="16px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 5V1H7V5L4.5 7.5L8.5 11.5L11 9H15V15H11C5.47715 15 1 10.5228 1 5Z"/>
+  </svg>
+)}

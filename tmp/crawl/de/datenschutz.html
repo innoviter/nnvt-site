@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="de-DE" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Innoviter liefert maßgeschneiderte Softwareplattformen wie nachhaltige Softwareanwendungen, digitale Infrastrukturen und Systemarchitekturen und unterstützt Kunden dabei, zukunftsfähige Geschäftsmodelle auf Basis von Software zu schaffen.">
+    <link href="/styles.min.css" rel="stylesheet">
+    <title>Daten&shy;schutz&shy;erklärung | Innoviter</title>
+
+
+
+
+    <script>
+        function getConsent() {
+            return JSON.parse(localStorage.getItem('consentSettings') || '{}');
+        }
+
+        function saveConsent() {
+            const settings = {
+                analytics: document.getElementById('consent-analytics').checked,
+            };
+            localStorage.setItem('consentSettings', JSON.stringify(settings));
+            document.getElementById('consent-banner').style.display = 'none';
+            applyConsent(settings);
+        }
+
+        function resetConsent() {
+            localStorage.removeItem('consentSettings');
+            location.reload();
+        }
+
+        function applyConsent(settings) {
+            if (settings.analytics) {
+                loadMatomo();
+            }
+        }
+
+        function loadMatomo() {
+            var _paq = window._paq = window._paq || [];
+
+            _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+            _paq.push(["setCookieDomain", "*.innoviter.com"]);
+            _paq.push(["disableCookies"]);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u="//analytics.innv.it/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '1']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const consent = getConsent();
+            if (Object.keys(consent).length === 0) {
+                document.getElementById('consent-banner').style.display = 'block';
+            } else {
+                applyConsent(consent);
+            }
+        });
+    </script>
+</head>
+<body>
+<header>
+    <div class="flex flex-col space-y-3">
+        <div class="flex items-center space-x-3">
+            <div class="flex-none" style="width: 58px; height: 40px;">
+                <a href="/" aria-label="Zurück zur Startseite">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2897.2222 1993.0554">
+                        <path transform="matrix(2.7777777,0,0,-2.7777777,0,1993.0554)" d="M 132.343 104.071 L 911.489 104.071 L 911.489 595.342 L 132.343 595.342 Z M 1019.685 18.92 L 26.424012 18.92 L 26.424012 688.993 L 1019.685 688.993 Z "/>
+                        <g>
+                            <path transform="matrix(2.7777777,0,0,-2.7777777,1976.4022,500.8816)" d="M 0 0 L 124.85 0 C 78.939 -123.813 33.188 -247.194 -12.547 -370.532 L -145.862 -370.532 C -191.604 -247.174 -237.354 -123.796 -283.268 .025 L -158.423 .025 C -132.203 -83.28 -105.925 -166.769 -79.647 -250.258 C -79.342 -250.232 -79.036 -250.206 -78.73 -250.18 C -52.498 -166.823 -26.266 -83.466 0 0 "/>
+                            <path transform="matrix(2.7777777,0,0,-2.7777777,0,1993.0554)" d="M 255.988 536.433 L 369.686 536.433 L 369.686 165.67298 L 255.988 165.67298 Z "/>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="flex-initial heading"><a href="/">Innoviter</a></div>
+        </div>
+        <div class="flex flex-col space-y-3">
+            <div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a
+                                    class="underline hover:no-underline" href="/de/">Home</a>
+                        </li>
+                        <li>
+                            <a
+                                    class="underline hover:no-underline" href="/de/kontakt/">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</header>
+<main>
+
+
+
+
+
+
+
+
+
+
+    <h1><span class="heading">Daten&shy;schutz&shy;erklärung</span></h1>
+
+    <h2 id="auf-einen-blick">
+        <span class="heading">Auf einen Blick</span>
+    </h2><h3 id="allgeshymeine-hinweise">
+    <span class="heading">Allge­meine Hinweise</span>
+</h3><p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit deinen personenbezogenen Daten passiert, wenn du diese Website besuchst.
+    Personenbezogene Daten sind alle Daten, mit denen du persönlich identifiziert werden kannst.
+    Ausführliche Informationen zum Thema Datenschutz entnimmst du unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+    <h3 id="datenshyerfassung-auf-dieser-website">
+        <span class="heading">Daten­erfassung auf dieser Website</span>
+    </h3><h4 id="wer-ist-verantshywortlich-für-die-datenshyerfassung-auf-dieser-website">
+    <span class="heading">Wer ist verant­wortlich für die Daten­erfassung auf dieser Website?</span>
+</h4><p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.
+    Dessen Kontaktdaten kannst du dem Abschnitt &ldquo;Hinweis zur Verantwortlichen Stelle&rdquo; in dieser Datenschutzerklärung entnehmen.</p>
+    <h4 id="wie-erfasshysen-wir-deine-daten">
+        <span class="heading">Wie erfas­sen wir deine Daten?</span>
+    </h4><p>Deine Daten werden zum einen dadurch erhoben, dass du uns diese mitteilst.
+    Hierbei kann es sich z. B. um Daten handeln, die du in Formularen (Kontaktformular etc.) eingibst.</p>
+    <p>Andere Daten werden automatisch oder nach deiner Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst.
+        Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
+        Die Erfassung dieser Daten erfolgt automatisch, sobald du diese Website besuchst.</p>
+    <h4 id="wofür-nutzen-wir-deine-daten">
+        <span class="heading">Wofür nutzen wir deine Daten?</span>
+    </h4><p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten.
+    Andere Daten können zur Analyse deines Nutzerverhaltens verwendet werden.</p>
+    <h4 id="welche-rechte-hast-du-bezügshylich-deiner-daten">
+        <span class="heading">Welche Rechte hast du bezüg­lich deiner Daten?</span>
+    </h4><p>Du hast jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck deiner gespeicherten personenbezogenen Daten zu erhalten.
+    Du hast außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.
+    Wenn du eine Einwilligung zur Datenverarbeitung erteilt hast, kannst du diese Einwilligung jederzeit für die Zukunft widerrufen.
+    Außerdem hast du das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.
+    Des Weiteren steht dir ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.</p>
+    <p>Hierzu sowie zu weiteren Fragen zum Thema Datenschutz kannst du dich jederzeit an uns wenden.</p>
+    <h4 id="analyse-tools-und-tools-von-drittshyanbietern">
+        <span class="heading">Analyse-Tools und Tools von Dritt­anbietern</span>
+    </h4><p>Beim Besuch dieser Website kann dein Surf-Verhalten statistisch ausgewertet werden.
+    Das geschieht vor allem mit sogenannten Analyseprogrammen.</p>
+    <p>Detaillierte Informationen zu diesen Analyseprogrammen findest du in der folgenden Datenschutzerklärung.</p>
+    <h2 id="hosting-und-content-delishyvery-netshyworks-cdn">
+        <span class="heading">Hosting und Content Deli­very Net­works (CDN)</span>
+    </h2><h3 id="extershynes-hosting">
+    <span class="heading">Exter­nes Hosting</span>
+</h3><p>Diese Website wird bei einem externen Dienstleister gehostet (Hoster).
+    Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert.
+    Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.</p>
+    <p>Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).</p>
+    <p>Unser Hoster wird deine Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.</p>
+    <p>Wir setzen folgenden Hoster ein:</p>
+    <p>Hetzner Online GmbH<br>
+        Industriestr. 25<br>
+        91710 Gunzenhausen<br>
+        Deutschland</p>
+    <h4 id="abschluss-eines-vertrashyges-über-auftragsshyverarbeitung">
+        <span class="heading">Abschluss eines Vertra­ges über Auftrags­verarbeitung</span>
+    </h4><p>Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir einen Vertrag über Auftragsverarbeitung mit unserem Hoster geschlossen.</p>
+    <h2 id="allgeshymeine-hinshyweise-und-pflichtshyinformationen">
+        <span class="heading">Allge­meine Hin­weise und Pflicht­informationen</span>
+    </h2><h3 id="datenshyschutz">
+    <span class="heading">Daten­schutz</span>
+</h3><p>Die Betreiber dieser Seiten nehmen den Schutz deiner persönlichen Daten sehr ernst.
+    Wir behandeln deine personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+    <p>Wenn du diese Website benutzt, werden verschiedene personenbezogene Daten erhoben.
+        Personenbezogene Daten sind Daten, mit denen du persönlich identifiziert werden kannst.
+        Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen.
+        Sie erläutert auch, wie und zu welchem Zweck das geschieht.</p>
+    <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann.
+        Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+    <h3 id="hinweis-zur-verantwortshylichen-stelle">
+        <span class="heading">Hinweis zur verantwort­lichen Stelle</span>
+    </h3><p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+    <p>Mischa Zöller<br>
+        c/o Innoviter UG<br>
+        In den Kolonnaden 7<br>
+        61231 Bad Nauheim<br>
+        Telefonnummer: +49 6032 7859109<br>
+        E-Mail-Adresse: <a href="mailto:mischa.zoeller@innoviter.com">mischa.zoeller@innoviter.com</a></p>
+    <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
+    <h3 id="speichershydauer">
+        <span class="heading">Speicher­dauer</span>
+    </h3><p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben deine personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt.
+    Wenn du ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufst, werden deine Daten gelöscht, sofern wir keinen anderen rechtlich zulässigen Gründe für die Speicherung deine personenbezogenen Daten haben (z.B. steuer- oder handelsrechtliche Aufbewahrungsfristen);
+    im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
+    <h3 id="widerruf-deiner-einshywilligung-zur-datenshyverarbeitung">
+        <span class="heading">Widerruf deiner Ein­willigung zur Daten­verarbeitung</span>
+    </h3><p>Viele Datenverarbeitungsvorgänge sind nur mit deiner ausdrücklichen Einwilligung möglich.
+    Du kannst eine bereits erteilte Einwilligung jederzeit widerrufen.
+    Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+    <h3 id="widerspruchsshyrecht-gegen-die-datenshyerhebung-in-besonderen-fällen-sowie-gegen-direktshywerbung-art-21-dsgvo">
+        <span class="heading">Widerspruchs­recht gegen die Daten­erhebung in besonderen Fällen sowie gegen Direkt­werbung (Art. 21 DSGVO)</span>
+    </h3><p>WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HAST DU JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS DEINER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG DEINER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN;
+    DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING.
+    DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNIMMST DU DIESER DATENSCHUTZERKLÄRUNG. WENN DU WIDERSPRUCH EINLEGST, WERDEN WIR DEINE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE DEINE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).</p>
+    <p>WERDEN DEINE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HAST DU DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG DICH BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN;
+        DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT.
+        WENN DU WIDERSPRICHST, WERDEN DEINE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).</p>
+    <h3 id="beschwerdeshyrecht-bei-der-zuständigen-aufsichtsshybehörde">
+        <span class="heading">Beschwerde­recht bei der zuständigen Aufsichts­behörde</span>
+    </h3><p>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu.
+    Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.</p>
+    <h3 id="recht-auf-datenübershytragbarkeit">
+        <span class="heading">Recht auf Datenüber­tragbarkeit</span>
+    </h3><p>Du hast das Recht, Daten, die wir auf Grundlage deiner Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an dich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.
+    Sofern du die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangst, erfolgt dies nur, soweit es technisch machbar ist.</p>
+    <h3 id="ssl--bzw-tls-verschlüsshyselung">
+        <span class="heading">SSL- bzw. TLS-Verschlüs­selung</span>
+    </h3><p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie z. B. Bestellungen oder Anfragen, die du an uns als Seitenbetreiber sendest, eine SSL- bzw. TLS-Verschlüsselung.
+    Eine verschlüsselte Verbindung erkennst du daran, dass die Adresszeile des Browsers von &ldquo;http://&rdquo; auf &ldquo;https://&rdquo; wechselt und an dem Schloss-Symbol in deiner Browserzeile.</p>
+    <p>Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die du an uns übermittelst, nicht von Dritten mitgelesen werden.</p>
+    <h3 id="auskunft-löschung-und-berichshytigung">
+        <span class="heading">Auskunft, Löschung und Berich­tigung</span>
+    </h3><p>Du hast im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über deine gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten.
+    Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten kannst du dich jederzeit an uns wenden.</p>
+    <h3 id="recht-auf-einshyschränkung-der-vershyarbeitung">
+        <span class="heading">Recht auf Ein­schränkung der Ver­arbeitung</span>
+    </h3><p>Du hast das Recht, die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.
+    Hierzu kannst du dich  jederzeit an uns wenden.
+    Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:</p>
+    <ul>
+        <li>Wenn du die Richtigkeit deiner bei uns gespeicherten personenbezogenen Daten bestreitest, benötigen wir in der Regel Zeit, um dies zu überprüfen.
+            Für die Dauer der Prüfung hast du das Recht, die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.</li>
+        <li>Wenn die Verarbeitung deiner personenbezogenen Daten unrechtmäßig geschah/geschieht, kannst du statt der Löschung die Einschränkung der Datenverarbeitung verlangen.</li>
+        <li>Wenn wir deine personenbezogenen Daten nicht mehr benötigen, du sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigst, hast du das Recht, statt der Löschung die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.</li>
+        <li>Wenn du einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt hast, muss eine Abwägung zwischen deinen und unseren Interessen vorgenommen werden.
+            Solange noch nicht feststeht, wessen Interessen überwiegen, hast du das Recht, die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.</li>
+    </ul>
+    <p>Wenn du die Verarbeitung deiner personenbezogenen Daten eingeschränkt hast, dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit deiner Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.</p>
+    <h2 id="datenershyfassung-auf-dieser-website">
+        <span class="heading">Datener­fassung auf dieser Website</span>
+    </h2><h3 id="cookies">
+    <span class="heading">Cookies</span>
+</h3><p>Aktuell werden keine Cookies gesetzt.</p>
+    <h3 id="server-log-dateien">
+        <span class="heading">Server-Log-Dateien</span>
+    </h3><p>Der Hoster der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die dein Browser automatisch an uns übermittelt.
+    Dies sind:</p>
+    <ul>
+        <li>Browsertyp und Browserversion</li>
+        <li>verwendetes Betriebssystem</li>
+        <li>Referrer URL</li>
+        <li>Hostname des zugreifenden Rechners</li>
+        <li>Uhrzeit der Serveranfrage</li>
+        <li>IP-Adresse</li>
+    </ul>
+    <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+    <p>Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+        Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.</p>
+    <h4 id="speichershydauer-logfiles">
+        <span class="heading">Speicher­dauer Logfiles</span>
+    </h4><p>Die Daten werden gelöscht, sobald diese für den Zweck der Erhebung nicht mehr erforderlich sind.
+    Dies ist für die Daten, die der Bereitstellung der Website dienen, grundsätzlich der Fall, wenn die jeweilige Sitzung beendet ist.</p>
+    <p>Im Falle der Speicherung der Daten in Logfiles ist dies nach spätestens 14 Tagen der Fall.
+        Eine darüberhinausgehende Speicherung ist möglich.
+        In diesem Fall werden die IP-Adressen der Nutzer anonymisiert, sodass eine Zuordnung des aufrufenden Clients nicht mehr möglich ist.</p>
+    <h2 id="analyse-tools-und-werbung">
+        <span class="heading">Analyse-Tools und Werbung</span>
+    </h2><p>Mit Ihrer Einwilligung verwenden wir die Open-Source-Software Matomo zur Analyse und statistischen Auswertung der
+    Nutzung der Website. Hierzu werden Cookies eingesetzt. Die dadurch erhaltenen Informationen über die Websitenutzung
+    werden ausschließlich an unsere Server übertragen und in pseudonymen Nutzungsprofilen zusammengefasst. Die Daten
+    verwenden wir zur Auswertung der Nutzung der Website. Eine Weitergabe der erfassten Daten an Dritte erfolgt nicht.</p>
+    <p>Die IP-Adressen werden anonymisiert (IPMasking), sodass eine Zuordnung zu einzelnen Nutzern nicht möglich ist.</p>
+    <p>Die Verarbeitung der Daten erfolgt auf Grundlage von Art. 6 Abs. 1 S. 1 lit. a DSGVO. Wir verfolgen damit unser
+        berechtigtes Interesse an der Optimierung unserer Webseite für unsere Außendarstellung.</p>
+    <p>Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookies in Ihrem Browser löschen oder Ihre
+        Datenschutzeinstellungen ändern.</p>
+    <p>Es wird derzeit keine Werbung auf unserer Website geschaltet.</p>
+    <h2 id="quelle">
+        <span class="heading">Quelle</span>
+    </h2><p><a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
+
+
+
+
+
+</main>
+<footer>
+    <div class="flex flex-col space-y-3">
+        <div>
+            <h4>Wie können wir helfen, deine Projektidee zu realisieren?</h4>
+        </div>
+        <div>
+            Lass&#39; uns reden.
+        </div>
+        <div class="flex flex-col md:flex-row md:space-x-9 md:py-6">
+            <div class="flex flex-row space-x-3 py-2">
+                <div class="py-1">
+                    <svg width="16px" height="16px" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 5.3585V14H16V5.35849L8 10.3585L0 5.3585Z"/>
+                        <path d="M16 3V2H0V3L8 8L16 3Z"/>
+                    </svg>
+                </div>
+                <div class="text-xl underline hover:no-underline"><a href="mailto:hello@innoviter.com">hello@innoviter.com</a></div>
+            </div>
+            <div class="flex flex-row space-x-3 py-2">
+                <div class="py-1">
+                    <svg width="16px" height="16px" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 5V1H7V5L4.5 7.5L8.5 11.5L11 9H15V15H11C5.47715 15 1 10.5228 1 5Z"/>
+                    </svg>
+                </div>
+                <div class="text-xl underline hover:no-underline"><a href="tel:004960327859109">+49 6032 7859109</a></div>
+            </div>
+        </div>
+        <div class="flex flex-col space-y-3">
+            <div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a
+                                    class="underline hover:no-underline" href="/de/">Home</a>
+                        </li>
+                        <li>
+                            <a
+                                    class="underline hover:no-underline" href="/de/kontakt/">Kontakt</a>
+                        </li>
+                        <li>
+                            <a
+                                    class="underline hover:no-underline" href="/de/impressum/">Impressum</a>
+                        </li>
+                        <li>
+                            <a
+                                    class="underline hover:no-underline" aria-current="page" class="active" href="/de/datenschutz/">Datenschutz</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <div class="pt-3 text-xs">
+            Copyright 2025 Innoviter UG. Alle Rechte vorbehalten.
+        </div>
+        <div class="pt-3 flex">
+            <div id="wcb" class="carbonbadge wcb-d"></div>
+            <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+        </div>
+        <div class="pt-3">
+            <img src="https://app.greenweb.org/api/v3/greencheckimage/innoviter.com?nocache=true" alt="This website runs on green hosting - verified by thegreenwebfoundation.org" width="200px" height="95px">
+        </div>
+        <div class="pt-3">
+            <a href="#" onclick="resetConsent()">Cookie-Einstellungen ändern</a>
+        </div>
+    </div>
+
+</footer>
+<div id="consent-banner" style="display: none;">
+    <div>
+        <strong>Datenschutzeinstellungen</strong>
+    </div>
+    <div>
+        Wir verwenden Cookies und andere Technologien, damit unsere Website zuverlässig und sicher läuft.
+    </div>
+    <div>
+        <input type="checkbox" checked disabled>
+        Notwendige<br/>
+        <input type="checkbox" id="consent-analytics" checked>
+        Anonymisierte Webanalyse
+    </div>
+    <div>
+        <button class="button" onclick="saveConsent()">Speichern</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+---
+import Logo from '../atoms/Logo.astro';
+import NavList from '../molecules/NavList.astro';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+const primaryNav = [
+  { href: '/de/', label: 'Home' },
+  { href: '/de/kontakt/', label: 'Kontakt' },
+];
+---
+<header>
+  <div class="flex flex-col space-y-3">
+    <div class="flex items-center space-x-3">
+      <Logo href="/de/" />
+      <div class="flex-initial heading"><a href="/de/">Innoviter</a></div>
+    </div>
+    <div class="flex flex-col space-y-3">
+      <div>
+        <NavList items={primaryNav} currentPath={currentPath} />
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,45 @@
+---
+import ContactInfo from '../molecules/ContactInfo.astro';
+import NavList from '../molecules/NavList.astro';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+const footerNav = [
+  { href: '/de/', label: 'Home' },
+  { href: '/de/kontakt/', label: 'Kontakt' },
+  { href: '/de/impressum/', label: 'Impressum' },
+  { href: '/de/datenschutz/', label: 'Datenschutz' },
+];
+---
+<footer>
+  <div class="flex flex-col space-y-3">
+    <div>
+      <h4>Wie können wir helfen, deine Projektidee zu realisieren?</h4>
+    </div>
+    <div>
+      Lass' uns reden.
+    </div>
+    <ContactInfo />
+    <div class="flex flex-col space-y-3">
+      <div>
+        <NavList items={footerNav} currentPath={currentPath} />
+      </div>
+    </div>
+    <div class="pt-3 text-xs">
+      Copyright 2025 Innoviter UG. Alle Rechte vorbehalten.
+    </div>
+    <div class="pt-3 flex">
+      <div id="wcb" class="carbonbadge wcb-d"></div>
+      <script is:inline src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    </div>
+    <div class="pt-3">
+      <img src="https://app.greenweb.org/api/v3/greencheckimage/innoviter.com?nocache=true" alt="This website runs on green hosting - verified by thegreenwebfoundation.org" width="200px" height="95px">
+    </div>
+    <div class="pt-3">
+      <a href="#" id="reset-consent-link">Cookie-Einstellungen ändern</a>
+    </div>
+  </div>
+</footer>
