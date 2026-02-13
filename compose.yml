@@ -1,0 +1,23 @@
+services:
+
+  site:
+    image: nnvt-site:latest
+    container_name: nnvt-site
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${APP_HANDLE}.rule=Host(`${APP_HOST}`) || Host(`www.${APP_HOST}`)"
+      - "traefik.http.routers.${APP_HANDLE}.entrypoints=websecure"
+      - "traefik.http.routers.${APP_HANDLE}.tls.certresolver=myresolver"
+      - "traefik.http.services.${APP_HANDLE}.loadbalancer.server.port=${APP_PORT}"
+      - "traefik.http.routers.${APP_HANDLE}.middlewares=redirect-www"
+      - "traefik.http.middlewares.redirect-www.redirectregex.regex=^https?://www.${APP_HOST}/(.*)"
+      - "traefik.http.middlewares.redirect-www.redirectregex.replacement=https://${APP_HOST}/$${1}"
+      - "traefik.http.middlewares.redirect-www.redirectregex.permanent=true"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    name: proxy
+    external: true

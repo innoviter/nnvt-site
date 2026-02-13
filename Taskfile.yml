@@ -1,7 +1,9 @@
 version: '3'
 
+dotenv: ['.env.deploy']
+
 vars:
-  DOCKER_IMAGE: innoviter-site
+  DOCKER_IMAGE: nnvt-site
 
 tasks:
   install:
@@ -40,23 +42,32 @@ tasks:
   docker:build:
     desc: Build Docker production image
     cmds:
-      - docker build -t {{.DOCKER_IMAGE}} .
+      - docker build -t {{.DOCKER_IMAGE}}:latest .
 
   docker:dev:
     desc: Start dev server via Docker Compose
     cmds:
-      - docker compose --profile dev up
+      - docker compose -f docker-compose.yml --profile dev up
 
   docker:prod:
-    desc: Build and start production container (http://localhost:8080)
+    desc: Build and start production container locally (http://localhost:8080)
     deps: [docker:build]
     cmds:
-      - docker compose --profile prod up -d
+      - docker compose -f docker-compose.yml --profile prod up -d
 
   docker:stop:
-    desc: Stop all Docker Compose services
+    desc: Stop all local Docker Compose services
     cmds:
-      - docker compose --profile dev --profile prod down
+      - docker compose -f docker-compose.yml --profile dev --profile prod down
+
+  deploy:
+    desc: Build image, transfer to server, and deploy
+    deps: [docker:build]
+    cmds:
+      - docker save {{.DOCKER_IMAGE}}:latest -o {{.IMAGE_FILE}}
+      - scp {{.IMAGE_FILE}} {{.REMOTE_USER}}@{{.REMOTE_HOST}}:{{.REMOTE_DIR}}
+      - bash deploy.sh
+      - rm -f {{.IMAGE_FILE}}
 
   lint:
     desc: Run Astro check (type checking)
