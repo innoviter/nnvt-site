@@ -19,33 +19,29 @@
     --color-text-header: #000000;
     --color-text-footer: #ffffff;
     --color-lime: #a3e635;
+    --color-highlight-bg: #a3e635;
+    --color-highlight-text: inherit;
     --color-border-button: #000000;
     --color-border-button-footer: #ffffff;
 }
 
+/* Dark mode (deactivated — activate via .dark class on <html> once colors are finalized)
 :root.dark {
     --color-bg-header: #1a1a1a;
-    --color-bg-main: #111111;
+    --color-bg-main: #151515;
     --color-text: #eeeeee;
     --color-text-header: #eeeeee;
+    --color-highlight-bg: #333333;
+    --color-highlight-text: #a3e635;
     --color-border-button: #ffffff;
 }
-
-@media (prefers-color-scheme: dark) {
-    :root:not(.light) {
-        --color-bg-header: #1a1a1a;
-        --color-bg-main: #111111;
-        --color-text: #eeeeee;
-        --color-text-header: #eeeeee;
-        --color-border-button: #ffffff;
-    }
-}
+*/
 
 /* === Base Styles === */
 body {
     background-color: var(--color-bg-body);
     color: var(--color-text);
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-family: Consolas, Menlo, "DejaVu Sans Mono", monospace;
 }
 
 header {
@@ -65,7 +61,8 @@ header .logo, header .heading {
     font-style: normal;
     font-size: 2rem;
     font-weight: bold;
-    background: linear-gradient(transparent, transparent 35%, var(--color-lime) 0, var(--color-lime) 90%, transparent 0) no-repeat;
+    background: linear-gradient(transparent, transparent 35%, var(--color-highlight-bg) 0, var(--color-highlight-bg) 90%, transparent 0) no-repeat;
+    color: var(--color-highlight-text);
 }
 
 main {
@@ -85,8 +82,12 @@ main ol {
     list-style-position: outside;
     padding-left: 2rem;
 }
-main > ul > li, main > ol > li, main > p {
-    padding: 0.5rem 0 0.5rem;
+main > ul > li, main > ol > li {
+    padding: 0.25rem 0;
+    line-height: 2rem;
+}
+main > p {
+    padding: 0.5rem 0;
     line-height: 2rem;
 }
 main pre {
@@ -117,20 +118,17 @@ main figure figcaption {
     font-size: 0.75rem;
 }
 
-main h1 {
+main h1, main h2 {
     font-size: 3rem;
     font-weight: bold;
     margin-top: 4.5rem;
-    margin-bottom: 1.5rem;
-}
-main h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 4.5rem;
-    margin-bottom: 1.5rem;
-}
-main h1 .heading, main h2 .heading {
-    background: linear-gradient(transparent, transparent 35%, var(--color-lime) 0, var(--color-lime) 90%, transparent 0) no-repeat;
+    margin-bottom: 2rem;
+    color: var(--color-highlight-text);
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-highlight-bg);
+    text-decoration-thickness: 0.75em;
+    text-underline-offset: -0.55em;
+    text-decoration-skip-ink: none;
 }
 main div.button + h2 {
     margin-top: 6rem;
@@ -139,7 +137,7 @@ main h3 {
     font-size: 2rem;
     font-weight: bold;
     margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 main div.button + h3 {
     margin-top: 4.5rem;

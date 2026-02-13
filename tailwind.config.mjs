@@ -9,7 +9,7 @@ export default {
       },
       fontFamily: {
         heading: ['Poppins', 'Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
-        body: ['"Courier New"', 'Courier', '"Lucida Sans Typewriter"', '"Lucida Typewriter"', 'monospace'],
+        body: ['Consolas', 'Menlo', '"DejaVu Sans Mono"', 'monospace'],
       },
     },
   },
