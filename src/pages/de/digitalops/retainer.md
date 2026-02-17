@@ -11,7 +11,7 @@ title: "DigitalOps Retainer-Modell | Innoviter"
 
 Wir übernehmen die gesamte Online-Präsenz - Website, Social Media, Newsletter, SEO - als laufende Betreuung. Mit einem festen monatlichen Retainer, regelmäßigen Strategiegesprächen und der Technik, die im Hintergrund einfach läuft.
 
-[Gespräch vereinbaren](http://localhost:4321/de/kontakt/)
+[Gespräch vereinbaren](/de/kontakt/)
 
 
 ## Was digitale Präsenz bedeutet
@@ -88,7 +88,7 @@ Die Technik hinter Ihrer Online-Präsenz verbraucht Ressourcen. Wir achten darau
 
 ## Die Pakete im Überblick
 
-Unsere Retainer-Pakete bewegen sich zwischen **990 € und 3.490 € pro Monat** - je nach Umfang, Kanalanzahl und Betreuungsintensität.
+Unsere Retainer-Pakete bewegen sich zwischen **990 € und 3.490 € pro Monat** - je nach Umfang, Kanalanzahl und Betreuungsintensität. Vor dem Retainer-Start fällt eine **einmalige Setup-Gebühr ab 490 €** an, die die intensive Startphase abdeckt – Analyse, Tool-Konfiguration, erster Content-Plan und die erste strategische Beratung.
 
 Bei jährlicher Zahlung gewähren wir **10% Rabatt** auf den Gesamtbetrag.
 
@@ -219,7 +219,7 @@ Wenn Sie sich in dieser Beschreibung wiederfinden, laden wir Sie zu einem ersten
 
 Wir lernen uns kennen, sprechen über Ihre Situation und finden heraus, ob und wie eine Zusammenarbeit passt.
 
-[Gespräch vereinbaren](http://localhost:4321/de/kontakt/)
+[Gespräch vereinbaren](/de/kontakt/)
 
 
 ---
